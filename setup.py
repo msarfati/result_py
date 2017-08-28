@@ -6,7 +6,7 @@ from distutils.core import setup
 setup(
   name = 'result_py',
   packages = ['result_py'],
-  version = '0.1.0',
+  version = '1.0.0',
   description = 'A Result type much like Rust\'s, featuring generics and lovely combinators.',
   author = 'Zack Mullaly',
   author_email = 'zsck@riseup.net',
