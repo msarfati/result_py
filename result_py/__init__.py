@@ -1,4 +1,4 @@
-'''xfil_agent/errors/types.py
+'''result_py/__init__.py
 Error types used to encode error handling into our type system and error-handling code.
 '''
 
