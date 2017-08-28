@@ -158,3 +158,20 @@ def Err(error: E) -> Result[T, E]:
     '''Construct a new Result of the Err variant containing some error.'''
 
     return Result(err=error)
+
+
+def try_(fn):
+    '''Wraps any function that may raise an exception in another function
+    that will return an Err containing that exception if it is raised, or
+    else simply wrap the successful result in Ok.
+    '''
+
+    def closure(*args, **kwargs):
+        '''Call the wrapped function.'''
+
+        try:
+            return Ok(f(*args, **kwargs))
+        except Exception as ex:
+            return Err(ex)
+
+    return closure
